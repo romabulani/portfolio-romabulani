@@ -4,6 +4,8 @@
 :root{
     --primary-color: #1E40AF;
     --light-blue: #BFEFFF;
+    --dark-grey: #2F4F4F;
+    --light-grey:#F3F4F6;
 }
 
 body{
@@ -69,12 +71,29 @@ footer ul{
     color: var(--primary-color)
 }
 
-.container{
+.container,.border-container-blue, .border-container-grey{
     padding: 1rem 1rem;
     /* text-align: center; */
     max-width: 600px;
     margin: auto;
 }
+
+.border-container-blue{
+    border: 1px solid var(--primary-color);
+    border-radius: 1rem;
+    background-color: var(--light-blue);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.border-container-grey{
+    border: 1px solid var(--dark-grey);
+    border-radius: 1rem;
+    background-color: var(--light-grey);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
 .align-link{
     padding: 1rem 1rem;
     /* max-width: 600px; */
