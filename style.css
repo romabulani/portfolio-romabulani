@@ -134,3 +134,10 @@ h1{
 .bold{
     font-weight: bold;
 }
+
+hr{
+    background-color: var(--primary-color);
+    height: 1px;
+    border: none;
+    width: 800px;
+}
