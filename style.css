@@ -140,3 +140,13 @@ hr{
     height: 1px;
     border: none;
 }
+
+#tag{
+    margin-left: 0.5rem;
+    /* width: 10rem; */
+    background-color: var(--dark-grey);
+    color: white;
+    border-radius: 1rem;
+    padding: 0.1rem 0.3rem;
+    font-size: small;
+}
