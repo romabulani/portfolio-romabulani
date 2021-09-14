@@ -1,3 +1,8 @@
-# portfolio-romabulani
+# My Portfolio
 
-Site developed as part of Neog Camp using HTML and CSS to showcase my projects and blogs.
+Description : This is my portfolio depicting the projects and blogs I have worked on.
+
+Tech Stack : HTML and CSS
+
+Link to the portfolio is here[https://romabulani.netlify.app/].
+
