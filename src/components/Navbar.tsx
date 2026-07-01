@@ -67,7 +67,7 @@ export default function Navbar() {
             <button
               onClick={toggleTheme}
               aria-label="Toggle theme"
-              className="rounded-full border border-(--border) w-9 h-9 flex items-center justify-center text-(--text) hover:border-(--accent) transition-colors"
+              className="rounded-full border border-(--border) w-9 h-9 flex items-center justify-center text-(--text) hover:border-(--accent) transition-colors cursor-pointer"
             >
               {theme === "dark" ? "☀️" : "🌙"}
             </button>
