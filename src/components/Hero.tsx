@@ -7,6 +7,7 @@ const ROLES = [
   "React & TypeScript Enthusiast",
   "Micro Frontend Enthusiast",
   "GraphQL Enthusiast",
+  "SEO & Performance Enthusiast",
 ];
 
 export default function Hero() {

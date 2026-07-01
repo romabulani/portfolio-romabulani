@@ -41,7 +41,7 @@ export const skillGroups = [
   },
   {
     label: "CMS & Tooling",
-    skills: ["Contentful", "Cloudinary", "Webpack", "Vite", "Rollup", "Rspack", "Git"],
+    skills: ["Contentful", "Cloudinary", "Webpack", "Vite", "Rollup", "Rspack", "Git", "SEO", "Performance Optimisation"],
   },
 ];
 
