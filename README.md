@@ -1,8 +1,10 @@
-# My Portfolio
+# Roma Bulani — Portfolio
 
-Description : This is my portfolio depicting the projects and blogs I have worked on.
+Personal portfolio site.
 
-Tech Stack : HTML and CSS
+## Tech stack
 
-Link to the portfolio is here[https://romabulani.netlify.app/].
+- React + TypeScript
+- Vite
+- Tailwind CSS v4
 
