@@ -83,6 +83,16 @@ export const experience = [
     ],
   },
   {
+    role: "Fullstack Mentor",
+    company: "NeoG Camp",
+    location: "Remote",
+    period: "2022",
+    highlights: [
+      "Mentored 50+ students aspiring for frontend engineering roles, guiding them through React, JavaScript, and modern frontend tooling.",
+      "Reviewed projects, conducted mock interviews, and provided career guidance to help students land their first frontend jobs.",
+    ],
+  },
+  {
     role: "Application Development Analyst",
     company: "Accenture",
     location: "Mumbai (Remote), India",

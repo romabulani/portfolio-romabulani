@@ -20,7 +20,7 @@ export default function ScrollToTop() {
           transition={{ duration: 0.2 }}
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           aria-label="Scroll to top"
-          className="fixed bottom-6 right-6 z-50 w-10 h-10 rounded-full bg-(--accent) text-white flex items-center justify-center shadow-lg hover:opacity-90 transition-opacity"
+          className="fixed bottom-6 right-6 z-50 w-10 h-10 rounded-full bg-(--accent) text-white flex items-center justify-center shadow-lg hover:opacity-90 transition-opacity cursor-pointer"
         >
           ↑
         </motion.button>
