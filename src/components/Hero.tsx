@@ -4,10 +4,10 @@ import { profile } from "../data/resume";
 
 const ROLES = [
   "Senior Frontend Engineer",
-  "React & TypeScript Enthusiast",
-  "Micro Frontend Enthusiast",
-  "GraphQL Enthusiast",
-  "SEO & Performance Enthusiast",
+  "React & TypeScript Engineer",
+  "Micro Frontend Engineer",
+  "GraphQL Engineer",
+  "SEO & Performance Engineer",
 ];
 
 export default function Hero() {

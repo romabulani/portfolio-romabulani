@@ -1,5 +1,6 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { motion, AnimatePresence } from "framer-motion";
 import { profile } from "../data/resume";
 import { useTheme } from "../context/ThemeContext";
 
@@ -14,9 +15,8 @@ const NAV_LINKS = [
 function useActiveSection() {
   const [active, setActive] = useState("about");
 
-  useEffect(() => {
+  useState(() => {
     const observers: IntersectionObserver[] = [];
-
     NAV_LINKS.forEach(({ id }) => {
       const el = document.getElementById(id);
       if (!el) return;
@@ -27,9 +27,8 @@ function useActiveSection() {
       obs.observe(el);
       observers.push(obs);
     });
-
     return () => observers.forEach((o) => o.disconnect());
-  }, []);
+  });
 
   return active;
 }
@@ -74,48 +73,71 @@ export default function Navbar() {
             <button
               onClick={() => setOpen((v) => !v)}
               aria-label="Toggle menu"
-              className="sm:hidden rounded-full border border-(--border) w-9 h-9 flex items-center justify-center text-(--text)"
+              className="sm:hidden rounded-full border border-(--border) w-9 h-9 flex items-center justify-center text-(--text) cursor-pointer"
             >
-              {open ? "✕" : "☰"}
+              <AnimatePresence mode="wait" initial={false}>
+                <motion.span
+                  key={open ? "close" : "open"}
+                  initial={{ opacity: 0, rotate: -90, scale: 0.5 }}
+                  animate={{ opacity: 1, rotate: 0, scale: 1 }}
+                  exit={{ opacity: 0, rotate: 90, scale: 0.5 }}
+                  transition={{ duration: 0.15 }}
+                >
+                  {open ? "✕" : "☰"}
+                </motion.span>
+              </AnimatePresence>
             </button>
           </div>
         </nav>
       </header>
 
-      {/* Mobile bottom sheet */}
-      <div
-        className={`sm:hidden fixed inset-0 z-40 transition-all duration-300 ${
-          open ? "pointer-events-auto" : "pointer-events-none"
-        }`}
-      >
-        <div
-          onClick={() => setOpen(false)}
-          className={`absolute inset-0 bg-black/40 transition-opacity duration-300 ${
-            open ? "opacity-100" : "opacity-0"
-          }`}
-        />
-        <div
-          className={`absolute bottom-0 left-0 right-0 bg-(--bg) border-t border-(--border) rounded-t-2xl px-6 pt-4 pb-10 transition-transform duration-300 ease-out ${
-            open ? "translate-y-0" : "translate-y-full"
-          }`}
-        >
-          <div className="w-10 h-1 rounded-full bg-(--border) mx-auto mb-6" />
-          <div className="flex flex-col gap-1">
-            {NAV_LINKS.map((link) => (
-              <Link
-                key={link.href}
-                to={link.href}
+      {/* Mobile full-page overlay */}
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.25 }}
+            className="sm:hidden fixed inset-0 z-40 bg-(--bg) flex flex-col"
+          >
+            {/* Close button top-right */}
+            <div className="flex justify-end px-6 py-4">
+              <button
                 onClick={() => setOpen(false)}
-                className={`text-base font-medium transition-colors py-3 border-b border-(--border) last:border-0 ${
-                  isHome && active === link.id ? "text-(--accent)" : "text-(--text)"
-                }`}
+                className="rounded-full border border-(--border) w-9 h-9 flex items-center justify-center text-(--text) cursor-pointer"
               >
-                {link.label}
-              </Link>
-            ))}
-          </div>
-        </div>
-      </div>
+                ✕
+              </button>
+            </div>
+
+            {/* Links centered */}
+            <div className="flex flex-col items-center justify-center flex-1 gap-2 pb-16">
+              {NAV_LINKS.map((link, i) => (
+                <motion.div
+                  key={link.href}
+                  initial={{ opacity: 0, y: 24 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: i * 0.07, duration: 0.3 }}
+                  className="w-full text-center"
+                >
+                  <Link
+                    to={link.href}
+                    onClick={() => setOpen(false)}
+                    className={`block text-3xl font-semibold py-4 transition-colors ${
+                      isHome && active === link.id
+                        ? "text-(--accent)"
+                        : "text-(--text-h) hover:text-(--accent)"
+                    }`}
+                  >
+                    {link.label}
+                  </Link>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
   );
 }
