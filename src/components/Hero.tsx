@@ -80,24 +80,14 @@ export default function Hero() {
         >
           Get in touch
         </a>
-        <div className="flex items-center gap-2">
-          <a
-            href={profile.resumeUrl}
-            target="_blank"
-            rel="noreferrer"
-            className="px-5 py-2.5 rounded-full border border-(--border) text-sm font-medium hover:border-(--accent) transition-colors"
-          >
-            View Resume
-          </a>
-          <a
-            href={profile.resumeUrl}
-            download
-            className="px-3 py-2.5 rounded-full border border-(--border) text-sm font-medium hover:border-(--accent) hover:text-(--accent) transition-colors"
-            title="Download Resume"
-          >
-            ↓
-          </a>
-        </div>
+        <a
+          href={profile.resumeUrl}
+          target="_blank"
+          rel="noreferrer"
+          className="px-5 py-2.5 rounded-full border border-(--border) text-sm font-medium hover:border-(--accent) transition-colors"
+        >
+          View Resume
+        </a>
       </motion.div>
     </section>
   );
