@@ -1,43 +1,43 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
-  <rect width="1200" height="630" fill="#0e0e12"/>
+  <rect width="1200" height="630" fill="#ffffff"/>
   <rect x="0" y="0" width="6" height="630" fill="#7c3aed"/>
 
   <!-- Subtle grid -->
   <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#25242e" stroke-width="1"/>
+    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#e6e4ea" stroke-width="1"/>
   </pattern>
   <rect width="1200" height="630" fill="url(#grid)" opacity="0.5"/>
 
   <!-- Avatar circle -->
-  <circle cx="160" cy="260" r="80" fill="#16161c" stroke="#25242e" stroke-width="2"/>
+  <circle cx="160" cy="260" r="80" fill="#f7f6f9" stroke="#e6e4ea" stroke-width="2"/>
   <text x="160" y="277" font-family="system-ui, sans-serif" font-size="52" font-weight="600" fill="#7c3aed" text-anchor="middle">RB</text>
 
   <!-- Name -->
-  <text x="280" y="220" font-family="system-ui, sans-serif" font-size="64" font-weight="700" fill="#f5f4f7">Roma Bulani</text>
+  <text x="280" y="220" font-family="system-ui, sans-serif" font-size="64" font-weight="700" fill="#0c0a0f">Roma Bulani</text>
 
   <!-- Title -->
-  <text x="280" y="278" font-family="system-ui, sans-serif" font-size="28" font-weight="400" fill="#a78bfa">Senior Frontend Engineer</text>
+  <text x="280" y="278" font-family="system-ui, sans-serif" font-size="28" font-weight="400" fill="#7c3aed">Senior Frontend Engineer</text>
 
   <!-- Divider -->
-  <line x1="280" y1="305" x2="900" y2="305" stroke="#25242e" stroke-width="1"/>
+  <line x1="280" y1="305" x2="900" y2="305" stroke="#e6e4ea" stroke-width="1"/>
 
   <!-- Description -->
-  <text x="280" y="348" font-family="system-ui, sans-serif" font-size="22" fill="#b3b0bb">5+ years building scalable React apps · TypeScript · GraphQL</text>
-  <text x="280" y="382" font-family="system-ui, sans-serif" font-size="22" fill="#b3b0bb">Micro Frontends · Apollo Client · Tailwind CSS</text>
+  <text x="280" y="348" font-family="system-ui, sans-serif" font-size="22" fill="#3f3b46">5+ years building scalable React apps · TypeScript · GraphQL</text>
+  <text x="280" y="382" font-family="system-ui, sans-serif" font-size="22" fill="#3f3b46">Micro Frontends · Apollo Client · Tailwind CSS</text>
 
   <!-- Tags -->
-  <rect x="280" y="415" width="100" height="36" rx="18" fill="rgba(124,58,237,0.12)" stroke="#7c3aed" stroke-width="1"/>
-  <text x="330" y="438" font-family="system-ui, sans-serif" font-size="16" fill="#a78bfa" text-anchor="middle">React</text>
+  <rect x="280" y="415" width="100" height="36" rx="18" fill="rgba(124,58,237,0.08)" stroke="#7c3aed" stroke-width="1"/>
+  <text x="330" y="438" font-family="system-ui, sans-serif" font-size="16" fill="#7c3aed" text-anchor="middle">React</text>
 
-  <rect x="394" y="415" width="140" height="36" rx="18" fill="rgba(124,58,237,0.12)" stroke="#7c3aed" stroke-width="1"/>
-  <text x="464" y="438" font-family="system-ui, sans-serif" font-size="16" fill="#a78bfa" text-anchor="middle">TypeScript</text>
+  <rect x="394" y="415" width="140" height="36" rx="18" fill="rgba(124,58,237,0.08)" stroke="#7c3aed" stroke-width="1"/>
+  <text x="464" y="438" font-family="system-ui, sans-serif" font-size="16" fill="#7c3aed" text-anchor="middle">TypeScript</text>
 
-  <rect x="548" y="415" width="110" height="36" rx="18" fill="rgba(124,58,237,0.12)" stroke="#7c3aed" stroke-width="1"/>
-  <text x="603" y="438" font-family="system-ui, sans-serif" font-size="16" fill="#a78bfa" text-anchor="middle">GraphQL</text>
+  <rect x="548" y="415" width="110" height="36" rx="18" fill="rgba(124,58,237,0.08)" stroke="#7c3aed" stroke-width="1"/>
+  <text x="603" y="438" font-family="system-ui, sans-serif" font-size="16" fill="#7c3aed" text-anchor="middle">GraphQL</text>
 
-  <rect x="672" y="415" width="80" height="36" rx="18" fill="rgba(124,58,237,0.12)" stroke="#7c3aed" stroke-width="1"/>
-  <text x="712" y="438" font-family="system-ui, sans-serif" font-size="16" fill="#a78bfa" text-anchor="middle">Vite</text>
+  <rect x="672" y="415" width="80" height="36" rx="18" fill="rgba(124,58,237,0.08)" stroke="#7c3aed" stroke-width="1"/>
+  <text x="712" y="438" font-family="system-ui, sans-serif" font-size="16" fill="#7c3aed" text-anchor="middle">Vite</text>
 
   <!-- URL -->
-  <text x="280" y="555" font-family="system-ui, sans-serif" font-size="20" fill="#3f3b46">romabulani.netlify.app</text>
+  <text x="280" y="555" font-family="system-ui, sans-serif" font-size="20" fill="#b3b0bb">romabulani.com</text>
 </svg>
