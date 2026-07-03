@@ -5,7 +5,7 @@ const socials = [
   { label: "Email", href: "mailto:hey@romabulani.com" },
   { label: "LinkedIn", href: profile.links.linkedin },
   { label: "GitHub", href: profile.links.github },
-  { label: "Twitter", href: profile.links.twitter },
+  { label: "X", href: profile.links.twitter },
 ];
 
 export default function Contact() {
